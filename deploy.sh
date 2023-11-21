@@ -28,7 +28,7 @@ DomainName='catwebsite.com'
 HostedZoneID='catwebsite'
 
 # SSL certificate ID for domain name
-SSLCertID='REPLACE_ME'
+#SSLCertID='REPLACE_ME'
 
 # VPC ID of the VPC where you are deploying the application
 VpcID='vpc-60337404'
@@ -53,7 +53,7 @@ aws cloudformation deploy \
         "Environment=${Environment}" \
         "BucketNamePrefix=${BucketNamePrefix}" \
         "DomainName=${DomainName}" \
-        "HostedZoneID=${HostedZoneID}" \
+        #"HostedZoneID=${HostedZoneID}" \
         "SSLCertID=${SSLCertID}" \
         "VpcID=${VpcID}" \
         "SubnetIDs=${SubnetIDs}" \
