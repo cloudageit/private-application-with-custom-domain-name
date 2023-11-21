@@ -34,10 +34,10 @@ SSLCertID='REPLACE_ME'
 VpcID='vpc-60337404'
 
 # Two or more subnet IDs where you want to access the application from
-SubnetIDs='REPLACE_ME'
+SubnetIDs='vpc-60337404'
 
 # CIDR address range allowed to access the application
-IngressCidr='REPLACE_ME'
+IngressCidr='172.16.0.0/16'
 
 ######################### Deployment commands ###########################
 #                     DO NOT EDIT BELOW THIS LINE                       #
