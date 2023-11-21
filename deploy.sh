@@ -22,22 +22,22 @@ Environment=${StackName}
 BucketNamePrefix=$(echo -n "$StackName" | tr '[:upper:]' '[:lower:]' | sed 's|[^0-9a-z-]||g')
 
 # Domain name for application (without https://)
-DomainName='catwebsite.com'
+DomainName='lookup.com'
 
 # Amazon Route 53 private hosted zone ID
-HostedZoneID='catwebsite'
+HostedZoneID='lookup.com'
 
 # SSL certificate ID for domain name
-#SSLCertID='REPLACE_ME'
+SSLCertID='REPLACE_ME'
 
 # VPC ID of the VPC where you are deploying the application
 VpcID='vpc-60337404'
 
 # Two or more subnet IDs where you want to access the application from
-SubnetIDs='vpc-60337404'
+SubnetIDs='SubnetVPC1AZEast1a'
 
 # CIDR address range allowed to access the application
-IngressCidr='172.16.0.0/16'
+IngressCidr='172.16.0.0/24'
 
 ######################### Deployment commands ###########################
 #                     DO NOT EDIT BELOW THIS LINE                       #
@@ -53,7 +53,7 @@ aws cloudformation deploy \
         "Environment=${Environment}" \
         "BucketNamePrefix=${BucketNamePrefix}" \
         "DomainName=${DomainName}" \
-        #"HostedZoneID=${HostedZoneID}" \
+        "HostedZoneID=${HostedZoneID}" \
         "SSLCertID=${SSLCertID}" \
         "VpcID=${VpcID}" \
         "SubnetIDs=${SubnetIDs}" \
