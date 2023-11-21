@@ -6,8 +6,8 @@ set -e
 #########################################################################
 #                       AWS environment setup                           #
 #########################################################################
-export AWS_DEFAULT_REGION='REPLACE_ME'
-export AWS_PROFILE='REPLACE_ME'
+export AWS_DEFAULT_REGION='us-east-1'
+export AWS_PROFILE='safiad@3265-4859-6406'
 
 #########################################################################
 #                          Paramater Values                             #
@@ -22,16 +22,16 @@ Environment=${StackName}
 BucketNamePrefix=$(echo -n "$StackName" | tr '[:upper:]' '[:lower:]' | sed 's|[^0-9a-z-]||g')
 
 # Domain name for application (without https://)
-DomainName='REPLACE_ME'
+DomainName='catwebsite.com'
 
 # Amazon Route 53 private hosted zone ID
-HostedZoneID='REPLACE_ME'
+HostedZoneID='catwebsite'
 
 # SSL certificate ID for domain name
 SSLCertID='REPLACE_ME'
 
 # VPC ID of the VPC where you are deploying the application
-VpcID='REPLACE_ME'
+VpcID='vpc-60337404'
 
 # Two or more subnet IDs where you want to access the application from
 SubnetIDs='REPLACE_ME'
